@@ -1,0 +1,36 @@
+Cluster Swarm local, utilizando o Vagrant 
+
+VM Master
+node01, node 02 e node 03
+
+
+
+##--Renomear as máquinas:
+##Na AWS copiar i IP da maquina e logar nela pelo putty
+hostnamestl hostname Master
+##gera um token
+
+docker swarm init
+
+docker swarm join --token (colar o token)
+
+## repetir o processo de copiar o ip de logar no putty e renomear cada uma delas:
+hostnamestl hostname node01
+
+hostnamestl hostname node02
+
+hostnamestl hostname node03
+
+##(para conferir as máquinas):
+
+docker node ls 
+
+
+##Arquivo de instalação 
+
+ curl -fsSL https://get.docker.com -o get-docker.sh
+ sudo sh get-docker.sh
+ 
+## no shell:
+ code .
+ vagrant up
